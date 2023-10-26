@@ -1,0 +1,21 @@
+my_db> db.users.aggregate([{$match: {"visits": {$gt: 300}}}, {$group: { _id: {$substr: ["$first_name",0,1]}, sum: {$sum: "$karma"}}}])
+[
+  { _id: 'Z', sum: -82 },
+  { _id: 'B', sum: 323 },
+  { _id: 'V', sum: -43 },
+  { _id: 'T', sum: -68 },
+  { _id: 'E', sum: 120 },
+  { _id: 'C', sum: 176 },
+  { _id: 'H', sum: 79 },
+  { _id: 'M', sum: 516 },
+  { _id: 'O', sum: 71 },
+  { _id: 'R', sum: 53 },
+  { _id: 'P', sum: 94 },
+  { _id: 'D', sum: -64 },
+  { _id: 'S', sum: 296 },
+  { _id: 'A', sum: -28 },
+  { _id: 'J', sum: 419 },
+  { _id: 'L', sum: 243 },
+  { _id: 'K', sum: 153 },
+  { _id: 'G', sum: 199 }
+]

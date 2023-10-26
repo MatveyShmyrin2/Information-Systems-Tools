@@ -1,0 +1,30 @@
+my_db> db.users.find({"topics":"as", "author": /.*example.ru.*/, "score": {$gt: 100}})
+[
+  {
+    _id: ObjectId("653a0eadfac84c7412dc2d02"),
+    author: 'lprudy@example.ru',
+    creation_date: ISODate("2020-06-27T00:00:00.000Z"),
+    topics: [ 'as', 'very', 'a', 'but' ],
+    score: 242,
+    status: 'published',
+    message: 'us for over with rabbit and screamed to to life her sat and i to and be and and join don fell march said majesty found if ever and their stand to than natural doing dormouse alice know size and back go twinkle alice went askance commotion caused in the she all found taking croquet dormouse but hearing the i as evidence i put the your'
+  },
+  {
+    _id: ObjectId("653a0eadfac84c7412dc2d09"),
+    author: 'aalfred@example.ru',
+    creation_date: ISODate("2021-02-03T00:00:00.000Z"),
+    topics: [ 'as', 'pleasure', 'hot' ],
+    score: 4707,
+    status: 'published',
+    message: 'all find the a that alice therefore off yet same and and it all rather and said the said out leaves tell this nor chorus just nine blasts made s plate if to nothing her round nose to except interesting alice say become is hatter grinned this and with close that over come and that all as mushroom interrupted then first time up the it wood what procession we moment pointing thought a round you'
+  },
+  {
+    _id: ObjectId("653a0eadfac84c7412dc2d53"),
+    author: 'sagnesse@example.ru',
+    creation_date: ISODate("2020-03-27T00:00:00.000Z"),
+    topics: [ 'worth', 'as', 'pleasure', 'get' ],
+    score: 369,
+    status: 'published',
+    message: 'sure for moment a it were it like could said mean fluttered'
+  }
+]

@@ -1,0 +1,23 @@
+my_db> db.posts.insertMany([{"creation_date": new Date(), "author": "skbx@example.com", "topics": ["mongodb"]},{"creation_time": ISODate("2021-12-31T00:00:00.000Z"), "author": "skbx@example.ru"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("653a2c3c3ace099998b0b82d"),
+    '1': ObjectId("653a2c3c3ace099998b0b82e")
+  }
+}
+my_db>
+
+
+
+
+
+my_db> db.posts.find({"author":"skbx@example.ru"})
+[
+  {
+    _id: ObjectId("653a2c3c3ace099998b0b82e"),
+    creation_time: ISODate("2021-12-31T00:00:00.000Z"),
+    author: 'skbx@example.ru'
+  }
+]
+my_db>

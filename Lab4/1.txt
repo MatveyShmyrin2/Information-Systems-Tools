@@ -1,0 +1,27 @@
+mysql> use my_db
+Database changed
+mysql> show tables;
++----------------------------+
+| Tables_in_my_db            |
++----------------------------+
+| discussion_group           |
+| user                       |
+| user_group_post            |
+| user_private_message       |
+| users_to_discussion_groups |
++----------------------------+
+5 rows in set (0.00 sec)
+
+mysql> describe user_private_message;
++--------------+--------------+------+-----+-------------------+-------------------+
+| Field        | Type         | Null | Key | Default           | Extra             |
++--------------+--------------+------+-----+-------------------+-------------------+
+| message_id   | int unsigned | NO   | PRI | NULL              | auto_increment    |
+| user_from_id | int unsigned | YES  | MUL | NULL              |                   |
+| user_to_id   | int unsigned | YES  | MUL | NULL              |                   |
+| send_time    | timestamp    | NO   | MUL | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| is_read      | tinyint(1)   | NO   |     | NULL              |                   |
+| read_time    | timestamp    | YES  |     | NULL              |                   |
+| message_text | text         | NO   |     | NULL              |                   |
++--------------+--------------+------+-----+-------------------+-------------------+
+7 rows in set (0.00 sec)

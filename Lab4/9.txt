@@ -1,0 +1,10 @@
+skdb> show dbs
+admin    40.00 KiB
+config  108.00 KiB
+local    72.00 KiB
+my_db   452.00 KiB
+skdb> use my_db
+switched to db my_db
+my_db> show collections
+posts
+users

@@ -1,0 +1,14 @@
+mysql> select date(send_time) DATE, count(message_id) ALL_MESSAGES, count(distinct user_from_id) as UNIQUE_USERS 
+from user_private_message 
+group by DATE having ALL_MESSAGES=UNIQUE_USERS;
++------------+--------------+--------------+
+| DATE       | ALL_MESSAGES | UNIQUE_USERS |
++------------+--------------+--------------+
+| 2020-10-21 |           13 |           13 |
+| 2020-10-22 |           24 |           24 |
+| 2020-10-24 |           19 |           19 |
+| 2020-10-27 |           13 |           13 |
+| 2020-10-28 |           18 |           18 |
+| 2020-11-03 |           25 |           25 |
++------------+--------------+--------------+
+6 rows in set (0.00 sec)

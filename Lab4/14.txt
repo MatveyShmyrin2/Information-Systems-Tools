@@ -1,0 +1,26 @@
+127.0.0.1:6379> zadd ratings 10 mysql
+(integer) 1
+127.0.0.1:6379> zadd ratings 20 postgresql
+(integer) 1
+127.0.0.1:6379> zadd ratings 30 mongodb
+(integer) 1
+127.0.0.1:6379> zadd ratings 40 redis
+(integer) 1
+127.0.0.1:6379> zincrby ratings 15 mysql
+"25"
+127.0.0.1:6379> zpopmax ratings 1
+1) "redis"
+2) "40"
+127.0.0.1:6379> zrange ratings 0 10 rev withscores
+1) "mongodb"
+2) "30"
+3) "mysql"
+4) "25"
+5) "postgresql"
+6) "20"
+127.0.0.1:6379> zrank ratings mysql
+(integer) 1
+127.0.0.1:6379> zrank ratings mongodb
+(integer) 2
+127.0.0.1:6379> zrank ratings postgresql
+(integer) 0

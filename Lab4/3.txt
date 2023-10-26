@@ -1,0 +1,15 @@
+select greatest(message_id, user_from_id, user_to_id) "ID", date(read_time) "READ", date(send_time) "SEND", message_text "TEXT"  
+from user_private_message 
+where send_time between '2020-11-01' and '2020-11-30' and message_text LIKE "a%" and read_time between send_time and adddate(send_time, interval +10 day);
+
+
+
+mysql> select greatest(message_id, user_from_id, user_to_id) "ID", date(read_time) "READ", date(send_time) "SEND", message_text "TEXT"  from user_private_message where send_time between '2020-11-01' and '2020-11-30' and message_text LIKE "a%" and read_time between send_time and adddate(send_time, interval +10
+ day);
++---------+------------+------------+------------------------------------------------------------------------------------------------------+
+| ID      | READ       | SEND       | TEXT                                                                                                 |
++---------+------------+------------+------------------------------------------------------------------------------------------------------+
+| 6521460 | 2020-11-11 | 2020-11-02 | assets_c AdClick ddp cruceros dlarticle2 d7 ordermotion operation accesorios IMP jubilee             |
+| 6521318 | 2020-11-12 | 2020-11-04 | admindemo dealtime pink 7395 resumelist 6808 prepaidsim index-dev Bin 3816 tmp_media eweb store4 dla |
++---------+------------+------------+------------------------------------------------------------------------------------------------------+
+2 rows in set (0.00 sec)

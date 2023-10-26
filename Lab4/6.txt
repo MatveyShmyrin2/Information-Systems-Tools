@@ -1,0 +1,13 @@
+mysql> with 
+groups_with_approve as (select * from discussion_group where approve_required=1),
+new_groups as (select * from groups_with_approve where creation_time between '2020-01-01' and curdate()) 
+select group_id from new_groups;
++----------+
+| group_id |
++----------+
+|   570774 |
+|   570864 |
+|   570823 |
+|   570848 |
++----------+
+4 rows in set (0.00 sec)

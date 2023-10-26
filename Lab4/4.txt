@@ -1,0 +1,8 @@
+mysql> select count(approved) "approved_cnt", min(joined_time) "oldest_join", max(approved_time) "recent_approve" from users_to_discussion_groups
+where approved = 1;
++--------------+---------------------+---------------------+
+| approved_cnt | oldest_join         | recent_approve      |
++--------------+---------------------+---------------------+
+|           81 | 2018-06-06 00:39:04 | 2021-02-02 00:39:04 |
++--------------+---------------------+---------------------+
+1 row in set (0.00 sec)

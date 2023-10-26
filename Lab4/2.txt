@@ -1,0 +1,18 @@
+mysql> select name Name from discussion_group where approve_required = true;
++-----------------------------------------------+
+| Name                                          |
++-----------------------------------------------+
+| 7176 citystate _MACOSX                        |
+| 6108 montroy printrecipe blog_                |
+| Datenpflege newptip                           |
+| 6b tt                                         |
+| editors-pick dirs resource_center xfguestbook |
+| stepup sendpm                                 |
+| cmn qnotify programmes provisional            |
+| graphics2 torremar                            |
+| cmon forumcp wellington Delphi                |
+| 5727 produs_prieten                           |
+| video2 cookie petra                           |
+| previa file-to-disallow amod_files            |
++-----------------------------------------------+
+12 rows in set (0.00 sec)
